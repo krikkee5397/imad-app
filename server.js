@@ -3,7 +3,7 @@ var morgan = require('morgan');
 var path = require('path');
 var app = express();
 app.use(morgan('combined'));
-var articles = {
+var page = {
      '1':{
      title:'he he',
      heading:'ricky singh',
@@ -12,7 +12,7 @@ var articles = {
              'i am fine.LOLi am fine.LOLi am fine.LOLi am fine.LOLi am fine.LOLi am fine.LOLi am fine.LOLi am fine.LOLi am fine.LOLi am fine.LOLi am fine.LOLi am fine.LOLvi am fine.LOLvi am fine.LOLvi am fine.LOLi am fine.LOLvi am fine.LOL'
              </p>`
             },
-    'article-two':{
+    '2':{
     title:'he he',
     heading:'ricky singh',
     date:'10 august 2017',
@@ -20,7 +20,7 @@ var articles = {
              'i am fine.LOLi am fine.LOLi am fine.LOLi am fine.LOLi am fine.LOLi am fine.LOLi am fine.LOLi am fine.LOLi am fine.LOLi fine.LOLi am fine.LOLi am fine.LOLvi am fine.LOLvi am fine.LOLvi am fine.LOLi am fine.LOLvi am fine.LOL'
 </p> `
            },
-    'article-three':{
+    '3':{
     title:'he he',
     heading:'ricky singh',
     date:'15 august 2017',
@@ -75,7 +75,7 @@ app.get('/', function (req, res) {
 });
 app.get('/:articleName',function(req,res){
     var articleName=req.params.articleName;
-    res.send(createTemplate(articles[articleName]));
+    res.send(createTemplate(page[articleName]));
 });
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
