@@ -1,17 +1,33 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-
 var app = express();
 app.use(morgan('combined'));
-
-var content = {
-  title:'he he',
-  heading:'ricky singh',
-  date:'6 august 2017',
-  content:`<p>
+var articles = {
+     'articleOne' :{
+     title:'he he',
+     heading:'ricky singh',
+     date:'6 august 2017',
+     content:`<p>
+             'i am fine.LOLi am fine.LOLi am fine.LOLi am fine.LOLi am fine.LOLi am fine.LOLi am fine.LOLi am fine.LOLi am fine.LOLi am fine.LOLi am fine.LOLi am fine.LOLvi am fine.LOLvi am fine.LOLvi am fine.LOLi am fine.LOLvi am fine.LOL'
+             </p>`
+            },
+    'articleTwo':{
+    title:'he he',
+    heading:'ricky singh',
+    date:'10 august 2017',
+    content:`<p>
+             'i am fine.LOLi am fine.LOLi am fine.LOLi am fine.LOLi am fine.LOLi am fine.LOLi am fine.LOLi am fine.LOLi am fine.LOLi fine.LOLi am fine.LOLi am fine.LOLvi am fine.LOLvi am fine.LOLvi am fine.LOLi am fine.LOLvi am fine.LOL'
+</p> `
+           },
+    'articleThree':{
+    title:'he he',
+    heading:'ricky singh',
+    date:'15 august 2017',
+    content:`<p>
              'i am fine.LOLi am fine.LOLi am fine.LOLi am fine.LOLi am fine.LOLi am fine.LOLi am fine.LOLi am fine.LOLi am fine.LOLi am fine.LOLi am fine.LOLi am fine.LOLvi am fine.LOLvi am fine.LOLvi am fine.LOLi am fine.LOLvi am fine.LOL
            </p>`
+        },
 };
   
 function createTemplate(data){
@@ -57,8 +73,9 @@ var htmlTemplate=
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-app.get('/article-one',function(req,res){
-    res.send(createTemplate(content));
+app.get('/:articleName',function(req,res){
+    var articleName=req.params.articleName;
+    res.send(createTemplate(articles[articleName]));
 });
 app.get('/article-two',function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
