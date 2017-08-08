@@ -11,7 +11,7 @@ img.onclick=function() {
     var interval =setInterval(moveRight,10);
 };
 var Counter=0;
-var button=document.getElementBy('counter');
+var button=document.getElementBy('Counter');
 button.onclick=function(){
   Counter=Counter+1;
   var span=document.getElementBy('count');
