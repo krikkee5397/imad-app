@@ -104,9 +104,9 @@ var port = 80;
 app.listen(port, function () {
   console.log(`IMAD course app listening on port ${port}!`);
 });
-var nameInput=document.getElementById("name");
+var nameInput=document.getElementById('name');
 var name=nameInput.value;
-var submit=document.getElementById("submiit_btn");
+var submit=document.getElementById('submiit_btn');
 submit.onclick=function(){
     
  var names=['name1','name2','name3']; 
@@ -114,6 +114,6 @@ submit.onclick=function(){
  for(var i=0;i<name.length;i++){
 list +='<li>'+name[i]+'</li>';
 }
-var ul=document.getElementById("namelist");
+var ul=document.getElementById('namelist');
 ul.HTML=list;
 };
