@@ -114,6 +114,6 @@ submit.onclick=function(){
  for(var i=0;i<name.length;i++){
 list +='<li>'+name[i]+'</li>';
 }
-var ul=document.getElementById('namelist');
+var ul=document.getElementById("namelist");
 ul.HTML=list;
 };
