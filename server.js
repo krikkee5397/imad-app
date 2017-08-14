@@ -105,7 +105,7 @@ app.listen(port, function () {
   console.log(`IMAD course app listening on port ${port}!`);
 });
 var nameInput=document.getElementById('name');
-var name=nameInput.value;
+var names=nameInput.value;
 var submit=document.getElementById('submiit_btn');
 submit.onclick=function(){
     
