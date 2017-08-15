@@ -86,7 +86,7 @@ app.get('/submit-name/:name', function (req, res){
 });
 
 app.get('/:number',function(req,res){
-    var number=req.params.number;
+    var number=req.query.number;
     res.send(createTemplate(page[number]));
 });
 app.get('/ui/style.css', function (req, res) {
