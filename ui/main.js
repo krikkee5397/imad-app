@@ -28,8 +28,8 @@ button.onclick=function(){
   
    request.open('GET','http://krikkee5397.imad.hasura.app-io/counter',true);
    request.send(null);
-};
-var submit=getElementById('submit_btn');*/
+};*/
+var submit=document.getElementById('submit_btn');
 submit.onclick=function(){
    var request=new XMLHttpRequest();
   request.onreadystatechange=function(){
