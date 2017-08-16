@@ -9,7 +9,7 @@ function moveRight() {
 }
 img.onclick=function() {
     var interval =setInterval(moveRight,10);
-};
+};*/
 var button=document.getElementById('Counter');
 button.onclick=function(){
   var request=new XMLHttpRequest();
@@ -28,7 +28,7 @@ button.onclick=function(){
   
    request.open('GET','http://krikkee5397.imad.hasura.app-io/counter',true);
    request.send(null);
-};*/
+};
 var submit=document.getElementById('submit_btn');
 submit.onclick=function(){
    var request=new XMLHttpRequest();
