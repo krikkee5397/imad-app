@@ -1,5 +1,5 @@
-console.log('Loaded!');
-/*var element=document.getElementById('main');
+/*console.log('Loaded!');
+var element=document.getElementById('main');
 element.innerHTML='ricky';
 var img=document.getElementById('madi');
 var marginLeft=0;
