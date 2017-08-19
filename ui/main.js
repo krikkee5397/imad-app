@@ -29,7 +29,7 @@ button.onclick=function(){
    request.open('GET','http://krikkee5397.imad.hasura.app-io/counter',true);
    request.send(null);
 };
-var submit=document.getElementById('submit_btn');
+/*var submit=document.getElementById('submit_btn');
 submit.onclick=function(){
    var request=new XMLHttpRequest();
   request.onreadystatechange=function(){
@@ -56,4 +56,4 @@ submit.onclick=function(){
    request.open('GET','http://krikkee5397.imad.hasura.app-io/submit-name?name='+name,true);
    request.send(null);
 
-   };
+   };*/
