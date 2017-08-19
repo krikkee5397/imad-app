@@ -13,7 +13,7 @@ img.onclick=function() {
 var button=document.getElementById('counter');
 //var counter=0;
 button.onclick=function(){
-    counter=counter+1;
+   // counter=counter+1;
     
   var request=new XMLHttpRequest();
   request.onreadystatechange=function(){
@@ -29,7 +29,7 @@ button.onclick=function(){
       }
   };
   
-   request.open('GET','http://krikkee5397.imad.hasura.app-io/counter',true);
+   request.open("GET","http://krikkee5397.imad.hasura.app-io/counter",true);
    request.send(null);
 };
 /*var submit=document.getElementById('submit_btn');
