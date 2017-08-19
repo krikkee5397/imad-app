@@ -10,7 +10,7 @@ function moveRight() {
 img.onclick=function() {
     var interval =setInterval(moveRight,10);
 };*/
-var button=document.getElementById('Counter');
+var button=document.getElementById('counter');
 button.onclick=function(){
   var request=new XMLHttpRequest();
   request.onreadystatechange=function(){
@@ -18,15 +18,15 @@ button.onclick=function(){
       {
           if(request.status===200)
           {
-              var Counter=request.responseText;
+              var counter=request.responseText;
               var span=document.getElementById('count');
-              span.innerHTML=Counter.toString();
+              span.innerHTML=counter.toString();
               
           }
       }
   };
   
-   request.open('GET','http://krikkee5397.imad.hasura.app-io/Counter',true);
+   request.open('GET','http://krikkee5397.imad.hasura.app-io/counter',true);
    request.send(null);
 };
 /*var submit=document.getElementById('submit_btn');
