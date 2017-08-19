@@ -26,7 +26,7 @@ button.onclick=function(){
       }
   };
   
-   request.open('GET','http://krikkee5397.imad.hasura.app-io/counter',true);
+   request.open('GET','http://krikkee5397.imad.hasura.app-io/Counter',true);
    request.send(null);
 };
 /*var submit=document.getElementById('submit_btn');
